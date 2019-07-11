@@ -1,0 +1,39 @@
+<form [formGroup]="myForm">
+
+  <input formControlName="email">
+  <span *ngIf="email.invalid && email.touched">
+      Your email does not look right
+  </span>
+
+
+  <input formControlName="password">
+  <span *ngIf="password.invalid && password.touched">
+      That password sucks...
+  </span>
+
+  <input formControlName="age">
+  <span *ngIf="age.errors?.min && age.touched">
+      {{ age.errors.min.actual }} is young to use this app kiddo!
+  </span>
+  <span *ngIf="age.errors?.max && age.touched">
+      {{ age.errors.max.actual }} is too you old to use this app gramps!
+  </span>
+
+  <button [disabled]="myForm.invalid">Let's Do it!</button>
+
+</form>
+
+
+
+<table>
+    <tbody>
+    <!-- <ng-container *ngFor="let x of apires1"> -->
+    <tr *ngFor="let key  of apires2">
+    <td>{{key.taskcode}}</td>
+    <td>{{key.jobecode}}<td>
+    
+    </tr>
+    <!-- </ng-container> -->
+    
+    </tbody>
+    </table>

@@ -1,0 +1,127 @@
+<table id="example" datatable [dtOptions]="dtOptions" class="display tableone" style="width:100%">
+  <thead>
+   
+      <tr>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Office</th>
+          <th>Age</th>
+          <th>Start date</th>
+          <th>Salary</th>
+      </tr>
+  
+  </thead>
+  <tbody>
+    
+      <tr *ngFor="let item of data">
+          <td>{{item.Name}}</td>
+          <td>{{item.Position}}</td>
+          <td>{{item.Office}}</td>
+          <td><span *ngIf="item.Age==61">age 61</span>
+            <span *ngIf="item.Age==66">age 66</span>
+            <span *ngIf="item.Age==63">age 63</span>
+        </td>
+          <td>{{item.Startdate}}</td>
+          <td>{{item.Salary}}</td>
+      </tr>
+   
+     
+  </tbody>
+<tfoot>
+    <tr>
+        <th><input type="text" placeholder="Search name" name="search-Name"/></th>
+        <th><input type="text" placeholder="Search position" name="search-Position"/></th>
+        <th><input type="text" placeholder="Search office" name="search-Office"/></th>
+        <th><input type="text" placeholder="Search Age" name="search-Age"/></th>
+        <th><input type="text" placeholder="Search Start date" name="search-Start-date"/></th>
+        <th><input type="text" placeholder="Search salary" name="search-Salary"/></th>
+      </tr>
+</tfoot>
+</table>
+
+
+<table id="example" datatable [dtOptions]="dtOptions1" class="display tabletwo" style="width:100%">
+    <thead>
+     
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let item of data">
+            <td>{{item.Name}}</td>
+            <td>{{item.Position}}</td>
+            <td>{{item.Office}}</td>
+            <td><span *ngIf="item.Age==61">age 61</span>
+              <span *ngIf="item.Age==66">age 66</span>
+              <span *ngIf="item.Age==63">age 63</span>
+          </td>
+            <td>{{item.Startdate}}</td>
+            <td>{{item.Salary}}</td>
+        </tr>
+     
+       
+    </tbody>
+  <tfoot>
+      <tr>
+          <th><input type="text" placeholder="Search name" name="search-Name"/></th>
+          <th><input type="text" placeholder="Search position" name="search-Position"/></th>
+          <th><input type="text" placeholder="Search office" name="search-Office"/></th>
+          <th><input type="text" placeholder="Search Age" name="search-Age"/></th>
+          <th><input type="text" placeholder="Search Start date" name="search-Start-date"/></th>
+          <th><input type="text" placeholder="Search salary" name="search-Salary"/></th>
+        </tr>
+  </tfoot>
+  </table>
+
+
+
+  <table id="example" datatable [dtOptions]="dtOptions2" class="display tablethree" style="width:100%">
+    <thead>
+     
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start date</th>
+            <th>Salary</th>
+        </tr>
+    
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let item of data">
+            <td>{{item.Name}}</td>
+            <td>{{item.Position}}</td>
+            <td>{{item.Office}}</td>
+            <td><span *ngIf="item.Age==61">age 61</span>
+              <span *ngIf="item.Age==66">age 66</span>
+              <span *ngIf="item.Age==63">age 63</span>
+          </td>
+            <td>{{item.Startdate}}</td>
+            <td>{{item.Salary}}</td>
+        </tr>
+     
+       
+    </tbody>
+  <tfoot>
+      <tr>
+          <th><input type="text" placeholder="Search name" name="search-Name"/></th>
+          <th><input type="text" placeholder="Search position" name="search-Position"/></th>
+          <th><input type="text" placeholder="Search office" name="search-Office"/></th>
+          <th><input type="text" placeholder="Search Age" name="search-Age"/></th>
+          <th><input type="text" placeholder="Search Start date" name="search-Start-date"/></th>
+          <th><input type="text" placeholder="Search salary" name="search-Salary"/></th>
+        </tr>
+  </tfoot>
+  </table>
+
+<router-outlet></router-outlet>
